@@ -1,0 +1,97 @@
+/* @import url(); */
+
+/* CSS reset */
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    color: aliceblue;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Button base */
+.button{
+    position: relative;
+    background-color: black;
+    color: aliceblue;
+    border: none;
+    margin: 1rem;
+    margin-bottom: 3.2rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+    overflow: hidden;  
+    padding: 1.2rem 2.4rem;
+    transition: all 0.3s ease-out;
+}
+
+/* Button 1 */
+.button_1:before{
+    content: "Text";
+    /* Absolute relative to the button */
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform-origin: bottom left;
+    transform: translateX(-20rem);
+    transition: transform 0.5s;
+}
+
+.button_1:hover{
+    color: white;
+    background-color: transparent;
+}
+
+.button_1:hover:before{
+    transform: translateX(0px);
+}
+
+/* Button 2 */
+.button_2:before{
+    content: "";
+    /* Absolute relative to the button */
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: blue;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    transform-origin: bottom left;
+    transform: translateY(-100%);
+    transition: all 0.2s ease-out;
+}
+
+.button_2:hover{
+    color: white;
+    background-color: transparent;
+}
+
+.button_2:hover:before{
+    transform: translateY(0px);
+}
+
+/* Button 3 */
+.button_3:hover{
+    transform: translateY(-2px) scale(1.5);
+    color: white;
+    background-color: blue;
+}
