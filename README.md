@@ -96,4 +96,4 @@ Uses:
 - A focal element in a transition is a persistent element that is significant to the overall hierarchy of element in transition.
 
 ## Code overview
-1. [Button](Button)
+1. [Button](Code/Button/Button.html)
