@@ -1,0 +1,96 @@
+/* @import url(); */
+
+/* CSS reset */
+*,
+*::after,
+*::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    color: aliceblue;
+}
+
+body{
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dog{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    cursor: default;
+}
+
+.mask{
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    background-color: rgba(38, 95, 142, 0.4);
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+.shop{
+    display: inline-block;
+    text-decoration: none;
+    padding: 7px 14px;
+    background: #000;
+    color: #fff;
+    text-transform: uppercase;
+    box-shadow: 0 0 1px #000;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.5s linear;
+}
+
+img{
+    width: 100%;
+    object-fit: contain;
+    transform: scale(0.8);
+    transition: all 0.7s ease-in-out;
+}
+
+h2{
+    font-size: 3rem;
+    margin: 20px 40px 20px 40px;
+    transform: scale(0);
+    color: #333;
+    transition: all 0.5s linear;
+    opacity: 0;
+}
+
+/* Hover Animations */
+.dog:hover img{
+    transform: scale(10);
+    opacity: 0;
+}
+
+.dog:hover .mask{
+    opacity: 1;
+}
+
+.dog:hover h2,
+.dog:hover .shop{
+    opacity: 1;
+    transform: scale(1);
+}
+
+.shop:hover{
+    background-color: white;
+    color: #000;
+}
